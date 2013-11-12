@@ -10,7 +10,21 @@
 		FDFFFCA7183194460023BCFB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDFFFCA6183194460023BCFB /* Foundation.framework */; };
 		FDFFFCAA183194460023BCFB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FDFFFCA9183194460023BCFB /* main.m */; };
 		FDFFFCAE183194460023BCFB /* Sandpit.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = FDFFFCAD183194460023BCFB /* Sandpit.1 */; };
+		FDFFFCB6183194920023BCFB /* Fraction.m in Sources */ = {isa = PBXBuildFile; fileRef = FDFFFCB5183194920023BCFB /* Fraction.m */; };
+		FDFFFCBD183194BA0023BCFB /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDFFFCBC183194BA0023BCFB /* XCTest.framework */; };
+		FDFFFCC5183194BA0023BCFB /* Sandpit_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = FDFFFCC4183194BA0023BCFB /* Sandpit_Tests.m */; };
+		FDFFFD1F1831AA330023BCFB /* Fraction.m in Sources */ = {isa = PBXBuildFile; fileRef = FDFFFCB5183194920023BCFB /* Fraction.m */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FDFFFCC7183194BA0023BCFB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FDFFFC9B183194450023BCFB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FDFFFCA2183194460023BCFB;
+			remoteInfo = Sandpit;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		FDFFFCA1183194460023BCFB /* CopyFiles */ = {
@@ -31,6 +45,13 @@
 		FDFFFCA9183194460023BCFB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		FDFFFCAC183194460023BCFB /* Sandpit-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Sandpit-Prefix.pch"; sourceTree = "<group>"; };
 		FDFFFCAD183194460023BCFB /* Sandpit.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = Sandpit.1; sourceTree = "<group>"; };
+		FDFFFCB4183194920023BCFB /* Fraction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Fraction.h; sourceTree = "<group>"; };
+		FDFFFCB5183194920023BCFB /* Fraction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Fraction.m; sourceTree = "<group>"; };
+		FDFFFCBB183194BA0023BCFB /* Sandpit Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Sandpit Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FDFFFCBC183194BA0023BCFB /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		FDFFFCC0183194BA0023BCFB /* Sandpit Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Sandpit Tests-Info.plist"; sourceTree = "<group>"; };
+		FDFFFCC4183194BA0023BCFB /* Sandpit_Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = Sandpit_Tests.m; path = "Sandpit Tests/Sandpit_Tests.m"; sourceTree = SOURCE_ROOT; };
+		FDFFFD1C1831A8990023BCFB /* Sandpit Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Sandpit Tests-Prefix.pch"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,13 +63,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		FDFFFCB8183194BA0023BCFB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FDFFFCBD183194BA0023BCFB /* XCTest.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		FDFFFC9A183194450023BCFB = {
 			isa = PBXGroup;
 			children = (
+				FDFFFCB4183194920023BCFB /* Fraction.h */,
+				FDFFFCB5183194920023BCFB /* Fraction.m */,
 				FDFFFCA8183194460023BCFB /* Sandpit */,
+				FDFFFCBE183194BA0023BCFB /* Sandpit Tests */,
 				FDFFFCA5183194460023BCFB /* Frameworks */,
 				FDFFFCA4183194460023BCFB /* Products */,
 			);
@@ -58,6 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				FDFFFCA3183194460023BCFB /* Sandpit */,
+				FDFFFCBB183194BA0023BCFB /* Sandpit Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -66,6 +99,7 @@
 			isa = PBXGroup;
 			children = (
 				FDFFFCA6183194460023BCFB /* Foundation.framework */,
+				FDFFFCBC183194BA0023BCFB /* XCTest.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -84,6 +118,24 @@
 			isa = PBXGroup;
 			children = (
 				FDFFFCAC183194460023BCFB /* Sandpit-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FDFFFCBE183194BA0023BCFB /* Sandpit Tests */ = {
+			isa = PBXGroup;
+			children = (
+				FDFFFCC4183194BA0023BCFB /* Sandpit_Tests.m */,
+				FDFFFCBF183194BA0023BCFB /* Supporting Files */,
+			);
+			path = "Sandpit Tests";
+			sourceTree = "<group>";
+		};
+		FDFFFCBF183194BA0023BCFB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FDFFFD1C1831A8990023BCFB /* Sandpit Tests-Prefix.pch */,
+				FDFFFCC0183194BA0023BCFB /* Sandpit Tests-Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -108,6 +160,24 @@
 			productReference = FDFFFCA3183194460023BCFB /* Sandpit */;
 			productType = "com.apple.product-type.tool";
 		};
+		FDFFFCBA183194BA0023BCFB /* Sandpit Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FDFFFCC9183194BA0023BCFB /* Build configuration list for PBXNativeTarget "Sandpit Tests" */;
+			buildPhases = (
+				FDFFFCB7183194BA0023BCFB /* Sources */,
+				FDFFFCB8183194BA0023BCFB /* Frameworks */,
+				FDFFFCB9183194BA0023BCFB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FDFFFCC8183194BA0023BCFB /* PBXTargetDependency */,
+			);
+			name = "Sandpit Tests";
+			productName = "Sandpit Tests";
+			productReference = FDFFFCBB183194BA0023BCFB /* Sandpit Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -116,6 +186,11 @@
 			attributes = {
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Luka Kruscic";
+				TargetAttributes = {
+					FDFFFCBA183194BA0023BCFB = {
+						TestTargetID = FDFFFCA2183194460023BCFB;
+					};
+				};
 			};
 			buildConfigurationList = FDFFFC9E183194450023BCFB /* Build configuration list for PBXProject "Sandpit" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -130,9 +205,20 @@
 			projectRoot = "";
 			targets = (
 				FDFFFCA2183194460023BCFB /* Sandpit */,
+				FDFFFCBA183194BA0023BCFB /* Sandpit Tests */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FDFFFCB9183194BA0023BCFB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		FDFFFC9F183194460023BCFB /* Sources */ = {
@@ -140,10 +226,28 @@
 			buildActionMask = 2147483647;
 			files = (
 				FDFFFCAA183194460023BCFB /* main.m in Sources */,
+				FDFFFCB6183194920023BCFB /* Fraction.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FDFFFCB7183194BA0023BCFB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FDFFFD1F1831AA330023BCFB /* Fraction.m in Sources */,
+				FDFFFCC5183194BA0023BCFB /* Sandpit_Tests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FDFFFCC8183194BA0023BCFB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FDFFFCA2183194460023BCFB /* Sandpit */;
+			targetProxy = FDFFFCC7183194BA0023BCFB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		FDFFFCAF183194460023BCFB /* Debug */ = {
@@ -232,6 +336,40 @@
 			};
 			name = Release;
 		};
+		FDFFFCCA183194BA0023BCFB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Sandpit Tests/Sandpit Tests-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Sandpit Tests/Sandpit Tests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		FDFFFCCB183194BA0023BCFB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Sandpit Tests/Sandpit Tests-Prefix.pch";
+				INFOPLIST_FILE = "Sandpit Tests/Sandpit Tests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -251,6 +389,16 @@
 				FDFFFCB3183194460023BCFB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FDFFFCC9183194BA0023BCFB /* Build configuration list for PBXNativeTarget "Sandpit Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FDFFFCCA183194BA0023BCFB /* Debug */,
+				FDFFFCCB183194BA0023BCFB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
