@@ -8,12 +8,10 @@
 
 #import "Fraction.h"
 
+static int gCounter;
+
 @implementation Fraction
 
-//{
-//    int numerator;
-//    int denominator;
-//}
 @synthesize numerator, denominator;
 
 -(void) print
@@ -21,25 +19,6 @@
     NSLog(@"%i/%i", numerator, denominator);
 }
 
-//-(void) setNumerator: (int) n
-//{
-//    numerator = n;
-//}
-//
-//-(int) numerator
-//{
-//    return numerator;
-//}
-//
-//-(void) setDenominator: (int) d
-//{
-//    denominator = d;
-//}
-//
-//-(int) denominator
-//{
-//    return denominator;
-//}
 -(void) setTo:(int)n over:(int)d
 {
     numerator = n;
@@ -53,7 +32,6 @@
     else
         return NAN;
 }
-
 
 -(Fraction *) add:(Fraction *)f
 {
@@ -106,7 +84,8 @@
     int v = denominator;
     int temp;
     
-    while (v != 0) {
+    while (v != 0)
+    {
         temp = u % v;
         u = v;
         v = temp;
@@ -115,6 +94,21 @@
     // divide them by the calculated gdc to 'reduce' the fraction
     numerator /= u;
     denominator /= u;
+}
+
++(Fraction *) allocF
+{
+    extern int gCounter; // not necessary
+    ++gCounter;
+    
+    return [Fraction alloc];
+}
+
++(int) count
+{
+    extern int gCounter; // not necessary
+    
+    return gCounter;
 }
 
 @end

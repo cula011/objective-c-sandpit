@@ -1,64 +1,13 @@
-//
-//  Fraction.m
-//  Sandpit
-//
-//  Created by Luka Kruscic on 24/09/12.
-//  Copyright (c) 2012 Luka Kruscic. All rights reserved.
-//
-
-//#import <Foundation/Foundation.h>
-//
-//// ---- @interface section ----
-//
-//@interface Fraction : NSObject
-//
-//-(void) print;
-//-(void) setNumerator: (int) n;
-//-(void) setDenominator: (int) d;
-//
-//@end
-
-// ---- @implementation section ----
-
-//@implementation Fraction
-//{
-//    int numerator;
-//    int denominator;
-//}
-//
-//-(void) print
-//{
-//    NSLog(@"%i/%i", numerator, denominator);
-//}
-//
-//-(void) setNumerator: (int) n
-//{
-//    numerator = n;
-//}
-//
-//-(void) setDenominator: (int) d
-//{
-//    denominator = d;
-//}
-
 #import "Fraction.h"
+//#import "Fraction+Comparison.h"
+#import "Complex.h"
 
 // ---- program section ---
 
 int main (int argc, char * argv[])
 {
     @autoreleasepool {
-        // Create an instance of a Fraction
-        // Fraction *myFraction;
-        // myFraction = [Fraction alloc];
-        // myFraction = [myFraction init];
         Fraction *myFraction = [[Fraction alloc] init];
-        
-        // Set fraction to 1/3
-        // [myFraction setNumerator: 1];
-        // myFraction.numerator = 1;
-        // [myFraction setDenominator: 3];
-        // myFraction.denominator = 3;
         [myFraction setTo:1 over:3];
         
         // Display the fraction using the print method
@@ -69,8 +18,8 @@ int main (int argc, char * argv[])
         
         Fraction *resultFraction;
         
-        Fraction *aFraction = [[Fraction alloc] init];
-        Fraction *bFraction = [[Fraction alloc] init];
+        Fraction *aFraction = [[Fraction allocF] init];
+        Fraction *bFraction = [[Fraction allocF] init];
         
         [aFraction setTo:1 over:4];
         [bFraction setTo:1 over:2];
@@ -112,6 +61,46 @@ int main (int argc, char * argv[])
         resultFraction = [aFraction divide:bFraction];
         
         [resultFraction print];
+        
+        NSLog(@"=====");
+        NSLog(@"Fractions allocated: %i", [Fraction count]);
+        
+        NSLog(@"=====");
+        Complex *aComplex = [[Complex alloc] init];
+        [aComplex setReal: -5.0 andImaginary: 2.5];
+        [aComplex print];
+        
+        /*
+        enum month{ january=1, february, march };
+        enum month aMonth;
+        
+        NSLog(@"Enter month number: ");
+        scanf("%i", &aMonth);
+        
+        switch(aMonth)
+        {
+            case january:
+                NSLog(@"January");
+                break;
+            case february:
+                NSLog(@"February");
+                break;
+            case march:
+                NSLog(@"March");
+                break;
+            default:
+                NSLog(@"Not a valid month!");
+        }
+        */
+        
+        NSLog(@"=====");
+        if ([aFraction isEqualTo:bFraction]) {
+            NSLog(@"aFraction is equal to bFraction");
+        }
+        else
+        {
+            NSLog(@"aFraction is not equal to bFraction");
+        }
     }
     return 0;
 }
